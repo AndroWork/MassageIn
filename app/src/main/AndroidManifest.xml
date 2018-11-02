@@ -26,8 +26,13 @@
         <activity
             android:name=".LogIn"
             android:theme="@style/SplashTheme" />
-        <activity android:name=".Register"
-            android:theme="@style/SplashTheme"></activity>
+        <activity
+            android:name=".Register"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
