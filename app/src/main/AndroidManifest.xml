@@ -17,15 +17,7 @@
         <activity
             android:name=".SplashScreen"
             android:theme="@style/SplashTheme">
-<<<<<<< HEAD
 
-=======
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
->>>>>>> 5e38e6745832aba029f8b5ea85c665157abac822
         </activity>
         <activity
             android:name=".LogIn"
@@ -36,7 +28,6 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-<<<<<<< HEAD
             android:theme="@style/AppTheme.NoActionBar">
 
             <intent-filter>
@@ -46,9 +37,6 @@
             </intent-filter>
 
         </activity>
-=======
-            android:theme="@style/AppTheme.NoActionBar"></activity>
->>>>>>> 5e38e6745832aba029f8b5ea85c665157abac822
     </application>
 
 </manifest>

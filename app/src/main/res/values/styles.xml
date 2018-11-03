@@ -1,11 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-<<<<<<< HEAD
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-=======
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
->>>>>>> 5e38e6745832aba029f8b5ea85c665157abac822
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -26,10 +22,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 5e38e6745832aba029f8b5ea85c665157abac822
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
