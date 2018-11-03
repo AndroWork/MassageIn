@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+<<<<<<< HEAD
     android:background="@android:color/white"
     tools:openDrawer="start">
 <RelativeLayout
@@ -113,11 +114,26 @@
     </ScrollView>
 
 </RelativeLayout>
+=======
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+>>>>>>> 5e38e6745832aba029f8b5ea85c665157abac822
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
+<<<<<<< HEAD
         app:menu="@menu/activity_main_drawer" />
+=======
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />
+
+>>>>>>> 5e38e6745832aba029f8b5ea85c665157abac822
 </android.support.v4.widget.DrawerLayout>

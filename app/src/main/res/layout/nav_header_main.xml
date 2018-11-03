@@ -3,7 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
+<<<<<<< HEAD
     android:background="@color/colorPrimary"
+=======
+    android:background="@drawable/side_nav_bar"
+>>>>>>> 5e38e6745832aba029f8b5ea85c665157abac822
     android:gravity="bottom"
     android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -12,6 +16,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
+<<<<<<< HEAD
     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/nav_user_image"
         android:layout_width="100dp"
@@ -24,6 +29,17 @@
 
     <TextView
         android:id="@+id/nav_user_name"
+=======
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/nav_header_desc"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <TextView
+>>>>>>> 5e38e6745832aba029f8b5ea85c665157abac822
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
@@ -31,7 +47,11 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
+<<<<<<< HEAD
         android:id="@+id/nav_user_email"
+=======
+        android:id="@+id/textView"
+>>>>>>> 5e38e6745832aba029f8b5ea85c665157abac822
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nav_header_subtitle" />

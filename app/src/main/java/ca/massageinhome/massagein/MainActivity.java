@@ -12,9 +12,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+<<<<<<< HEAD
 import android.widget.TextView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+=======
+>>>>>>> 5e38e6745832aba029f8b5ea85c665157abac822
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -25,8 +28,20 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+<<<<<<< HEAD
         getSupportActionBar().setTitle("massageinhome");
 
+=======
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+>>>>>>> 5e38e6745832aba029f8b5ea85c665157abac822
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -36,6 +51,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+<<<<<<< HEAD
 
 
         //Inflating Navigation Header in Navigation Menu....
@@ -43,6 +59,8 @@ public class MainActivity extends AppCompatActivity
         CircleImageView userImage = findViewById(R.id.nav_user_image);
         TextView userName = findViewById(R.id.nav_user_name);
         TextView userEmail = findViewById(R.id.nav_user_email);
+=======
+>>>>>>> 5e38e6745832aba029f8b5ea85c665157abac822
     }
 
     @Override
