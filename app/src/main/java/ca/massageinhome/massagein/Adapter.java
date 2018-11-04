@@ -6,6 +6,7 @@ import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -38,17 +39,20 @@ public class Adapter extends PagerAdapter {
         layoutInflater = LayoutInflater.from(context);
         View view = layoutInflater.inflate(R.layout.all_events_layout,container,false);
 
-        TextView title,book;
+        TextView title,details;
         ImageView image;
+        Button book;
 
         image = view.findViewById(R.id.image);
         title = view.findViewById(R.id.title);
+        details = view.findViewById(R.id.details);
         book = view.findViewById(R.id.book);
 
 
         image.setImageResource(models.get(position).getImage());
         title.setText(models.get(position).getTitle());
-        book.setText(models.get(position).getBook());
+        details.setText(models.get(position).getDetails());
+
 
 
         container.addView(view , 0);

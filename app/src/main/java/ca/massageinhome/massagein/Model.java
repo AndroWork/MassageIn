@@ -4,13 +4,13 @@ public class Model {
 
     private int image;
     private String title;
-    private String book;
+    private String details;
 
 
-    public Model(int image, String title, String book) {
+    public Model(int image, String title,String details) {
         this.image = image;
         this.title = title;
-        this.book = book;
+        this.details = details;
 
     }
 
@@ -30,12 +30,12 @@ public class Model {
         this.title = title;
     }
 
-    public String getBook() {
-        return book;
+    public String getDetails() {
+        return details;
     }
 
-    public void setBook(String date) {
-        this.book = book;
+    public void setDetails(String details) {
+        this.details = details;
     }
 
 
