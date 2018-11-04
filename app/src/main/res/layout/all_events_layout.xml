@@ -9,7 +9,7 @@
     android:layout_height="500dp"
     app:cardCornerRadius="10dp"
     android:layout_margin="5dp"
-    app:cardElevation="5dp"
+    app:cardElevation="10dp"
     android:fadingEdgeLength="0dp"
     android:background="@android:color/white"
 
@@ -58,7 +58,7 @@
                 android:id="@+id/details"
                 android:paddingLeft="30dp"
                 android:paddingRight="30dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
