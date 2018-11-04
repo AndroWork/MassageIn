@@ -18,12 +18,9 @@
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
+
     </android.support.design.widget.AppBarLayout>
 
-<<<<<<< HEAD
-    <!--<include layout="@layout/content_main" /> !-->
-=======
     <include layout="@layout/content_main" />
->>>>>>> 5e38e6745832aba029f8b5ea85c665157abac822
 
 </android.support.design.widget.CoordinatorLayout>

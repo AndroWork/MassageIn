@@ -1,8 +1,6 @@
 package ca.massageinhome.massagein;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,12 +10,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-<<<<<<< HEAD
 import android.widget.TextView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-=======
->>>>>>> 5e38e6745832aba029f8b5ea85c665157abac822
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -26,41 +21,24 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-<<<<<<< HEAD
-        getSupportActionBar().setTitle("massageinhome");
+        getSupportActionBar().setTitle("MassageInHome");
 
-=======
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
->>>>>>> 5e38e6745832aba029f8b5ea85c665157abac822
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer =  findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-<<<<<<< HEAD
-
 
         //Inflating Navigation Header in Navigation Menu....
         View view = navigationView.inflateHeaderView(R.layout.nav_header_main);
         CircleImageView userImage = findViewById(R.id.nav_user_image);
         TextView userName = findViewById(R.id.nav_user_name);
         TextView userEmail = findViewById(R.id.nav_user_email);
-=======
->>>>>>> 5e38e6745832aba029f8b5ea85c665157abac822
     }
 
     @Override

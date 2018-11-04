@@ -9,23 +9,19 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo_mobi"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logo_mobi"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".SplashScreen"
             android:theme="@style/SplashTheme">
-<<<<<<< HEAD
-
-=======
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
->>>>>>> 5e38e6745832aba029f8b5ea85c665157abac822
         </activity>
         <activity
             android:name=".LogIn"
@@ -36,19 +32,10 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-<<<<<<< HEAD
-            android:theme="@style/AppTheme.NoActionBar">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-        </activity>
-=======
             android:theme="@style/AppTheme.NoActionBar"></activity>
->>>>>>> 5e38e6745832aba029f8b5ea85c665157abac822
+        <activity android:name=".PaymentActivity"
+            android:label="Payments">
+        </activity>
     </application>
 
 </manifest>
