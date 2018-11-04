@@ -23,16 +23,9 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-<<<<<<< HEAD
-        getSupportActionBar().setTitle("massageinhome");
-
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-=======
         getSupportActionBar().setTitle("MassageInHome");
 
         DrawerLayout drawer =  findViewById(R.id.drawer_layout);
->>>>>>> 6e16cf78d3c24c061281b8a4bf581efb209a0143
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -40,10 +33,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-<<<<<<< HEAD
-
-=======
->>>>>>> 6e16cf78d3c24c061281b8a4bf581efb209a0143
 
         //Inflating Navigation Header in Navigation Menu....
         View view = navigationView.inflateHeaderView(R.layout.nav_header_main);

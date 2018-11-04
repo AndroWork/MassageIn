@@ -17,15 +17,11 @@
         <activity
             android:name=".SplashScreen"
             android:theme="@style/SplashTheme">
-<<<<<<< HEAD
-
-=======
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
->>>>>>> 6e16cf78d3c24c061281b8a4bf581efb209a0143
         </activity>
         <activity
             android:name=".LogIn"
@@ -36,20 +32,9 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-<<<<<<< HEAD
-            android:theme="@style/AppTheme.NoActionBar">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-=======
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".PaymentActivity"
             android:label="Payments">
->>>>>>> 6e16cf78d3c24c061281b8a4bf581efb209a0143
         </activity>
     </application>
 
