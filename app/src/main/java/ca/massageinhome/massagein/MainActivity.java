@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("MassageInHome");
+        getSupportActionBar().setTitle("   Massage In Home");
+        getSupportActionBar().setIcon(R.drawable.logo_mobi);
 
         DrawerLayout drawer =  findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -76,10 +77,10 @@ public class MainActivity extends AppCompatActivity
                 "This therapy is based on individual needs which ensures best treatment.";
 
 
-        models.add(new Model(R.drawable.Sweedish,"Sweedish",sweedishDetails));
-        models.add(new Model(R.drawable.Deeptissue,"Deeptissue",deeptissueDetails));
-        models.add(new Model(R.drawable.Sports,"Sports",sportsDetails));
-        models.add(new Model(R.drawable.Prenatal,"Prenatal",prenatalDetails));
+        models.add(new Model(R.drawable.sweedish,"Sweedish",sweedishDetails));
+        models.add(new Model(R.drawable.deeptissue,"Deeptissue",deeptissueDetails));
+        models.add(new Model(R.drawable.sports,"Sports",sportsDetails));
+        models.add(new Model(R.drawable.prenatal,"Prenatal",prenatalDetails));
 
         adapter = new Adapter(models,this);
 
@@ -87,7 +88,7 @@ public class MainActivity extends AppCompatActivity
         viewPager.setAdapter(adapter);
         //viewPager.setClipToPadding(false);
         //viewPager.setClipChildren(false);
-        viewPager.setPadding(40,0,40,0);
+        viewPager.setPadding(20,0,20,0);
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
