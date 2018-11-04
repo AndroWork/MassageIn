@@ -1,8 +1,6 @@
 package ca.massageinhome.massagein;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -23,20 +21,29 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+<<<<<<< HEAD
         getSupportActionBar().setTitle("massageinhome");
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+=======
+        getSupportActionBar().setTitle("MassageInHome");
+
+        DrawerLayout drawer =  findViewById(R.id.drawer_layout);
+>>>>>>> 6e16cf78d3c24c061281b8a4bf581efb209a0143
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6e16cf78d3c24c061281b8a4bf581efb209a0143
 
         //Inflating Navigation Header in Navigation Menu....
         View view = navigationView.inflateHeaderView(R.layout.nav_header_main);
