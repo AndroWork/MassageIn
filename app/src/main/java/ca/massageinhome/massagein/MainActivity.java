@@ -2,6 +2,7 @@ package ca.massageinhome.massagein;
 
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -25,7 +26,10 @@ public class MainActivity extends AppCompatActivity
     ViewPager viewPager;
     Adapter adapter;
     List<Model> models;
-
+    private float lastOffset;
+    float offset;
+    ArrayList<CardView> mViews;
+    private boolean scalingEnabled = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,18 +85,74 @@ public class MainActivity extends AppCompatActivity
         models.add(new Model(R.drawable.sports,"Sports",sportsDetails));
         models.add(new Model(R.drawable.prenatal,"Prenatal",prenatalDetails));
 
-        adapter = new Adapter(models,this);
+        mViews = new ArrayList<>();
+        mViews.add(null);
+        mViews.add(null);
+        mViews.add(null);
+        mViews.add(null);
+
+        adapter = new Adapter(models,this,mViews);
 
         viewPager = findViewById(R.id.viewPager);
         viewPager.setAdapter(adapter);
         //viewPager.setClipToPadding(false);
         //viewPager.setClipChildren(false);
-        viewPager.setPadding(20,0,20,0);
+        viewPager.setOffscreenPageLimit(3);
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                int realCurrentPosition;
+                int nextPosition;
+                float baseElevation = adapter.getBaseElevation();
+                float realOffset;
+                boolean goingLeft = lastOffset > positionOffset;
 
+                // If we're going backwards, onPageScrolled receives the last position
+                // instead of the current one
+
+                if(goingLeft){
+                    realCurrentPosition = position + 1;
+                    nextPosition = position;
+                    realOffset = 1-positionOffset;
+                }else{
+                    nextPosition = position + 1;
+                    realCurrentPosition = position;
+                    realOffset = positionOffset;
+                }
+
+                offset = realOffset;
+
+                // Avoid crash on scroll
+                if(nextPosition > adapter.getCount() - 1 || realCurrentPosition > adapter.getCount()-1){
+                    return;
+                }
+
+                CardView currentCard = mViews.get(realCurrentPosition);
+
+                // This might be null if a fragment is being used
+                // and views weren't created yet
+
+                if(currentCard != null){
+                    if(scalingEnabled){
+                        currentCard.setScaleX((float)(1+0.1*(1-realOffset)));
+                        currentCard.setScaleY((float)(1+0.1*(1-realOffset)));
+                    }
+                    //  currentCard.setCardElevation((baseElevation + baseElevation *(slideAdapter.MAX_ELEVATION_FACTOR-1)* (1-realOffset)));
+                }
+
+                CardView nextCard = mViews.get(nextPosition);
+
+                // We might be scrolling fast enough so that the next (or previous) card
+                //was already destroyed or a fragmentmight not have been created yet
+                if(nextCard != null){
+                    if(scalingEnabled){
+                        nextCard.setScaleX((float)(1+0.1*(realOffset)));
+                        nextCard.setScaleY((float)(1+0.1*(realOffset)));
+                    }
+                }
+
+                lastOffset = positionOffset;
             }
 
             @Override
@@ -116,7 +176,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
