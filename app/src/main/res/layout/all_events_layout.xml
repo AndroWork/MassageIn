@@ -12,8 +12,6 @@
     app:cardElevation="10dp"
     android:fadingEdgeLength="0dp"
     android:background="@android:color/white"
-
-
     >
 
     <LinearLayout
