@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LogIn"
-    android:background="#c7ac92">
+    android:background="@drawable/gradient">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -30,14 +30,15 @@
         android:layout_marginTop="68dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/shape"
+        android:background="@drawable/inputs"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        />
 
     <EditText
         android:id="@+id/editText2"
@@ -48,7 +49,7 @@
         android:layout_marginTop="18dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/shape"
+        android:background="@drawable/inputs"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -67,7 +68,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/shape"
+        android:background="@drawable/inputs"
         android:backgroundTint="@color/colorPrimaryDark"
         android:text="log in"
         android:textColor="#ffffff"
@@ -85,6 +86,7 @@
         android:layout_marginRight="44dp"
         android:text="Forgot Pasword?"
         android:textSize="16sp"
+        android:textColor="@android:color/white"
         app:layout_constraintBaseline_toBaselineOf="@+id/register_text_view"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -96,6 +98,7 @@
         android:layout_marginLeft="48dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
+        android:textColor="@android:color/white"
         android:text="Don't have an account?"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"

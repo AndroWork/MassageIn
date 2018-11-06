@@ -10,7 +10,7 @@
     android:background="@color/colorPrimaryDark"
     android:layout_height="match_parent">
 
-    <android.support.v4.view.ViewPager
+   <!-- <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/viewPager"
@@ -23,5 +23,12 @@
         android:paddingLeft="25dp"
         android:paddingStart="25dp">
 
-    </android.support.v4.view.ViewPager>
+
+    </android.support.v4.view.ViewPager>-->
+
+    <include
+        layout="@layout/services"
+        >
+
+    </include>
 </RelativeLayout>

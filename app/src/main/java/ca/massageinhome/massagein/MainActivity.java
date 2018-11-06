@@ -1,5 +1,7 @@
 package ca.massageinhome.massagein;
 
+import android.app.Activity;
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.CardView;
@@ -13,6 +15,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -23,14 +28,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    ViewPager viewPager;
-    Adapter adapter;
-    List<Model> models;
-    private float lastOffset;
-    float offset;
-    ArrayList<CardView> mViews;
-    private boolean scalingEnabled = true;
-
+    Dialog dialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,132 +54,99 @@ public class MainActivity extends AppCompatActivity
 
 
 
+        CardView sweedish = findViewById(R.id.sweedish);
+        CardView deeptissue = findViewById(R.id.deeptissue);
+        CardView sports = findViewById(R.id.sports);
+        CardView prenatal = findViewById(R.id.prenatal);
 
 
 
-        models = new ArrayList<>();
-
-        String sweedishDetails = "In Sweden this massage is also called classic massage. " +
-                "It is a classic treatment that is based on western standards. " +
-                "Five techniques used in this type of massage are; stroking and gliding, kneading, rubbing, tapping or pounding, and vibrating. " +
-                "These are the things that come to mind when you think about Swedish classic massage.";
-
-        String deeptissueDetails = "If you have persisting pain and muscle aches, it is the right time to contact us for deep tissue massage. " +
-                "Our expert therapists will use deliberate and slow pressure to reach deep layers of tissues and muscles. " +
-                "This massage is good for chronic aches and pain in areas such as neck, upper back, leg muscle tightness, lower back pain, and sore shoulders.";
-
-        String sportsDetails = "This is what you need if you are part of a sports. " +
-                "This massage helps your tissue and prepare body and mind for better performance when you are in the field. " +
-                "This improves endurance and flexibility, which prevents injury and muscle soreness. " +
-                "It is a best for those who are regularly involved in sports.";
-
-        String prenatalDetails = "A massage for pregnant women! It takes away the strain from your tired muscles and joints. " +
-                "It can also help improve blood circulation and reduce any swelling that you have been having lately. " +
-                "This therapy is based on individual needs which ensures best treatment.";
-
-
-        models.add(new Model(R.drawable.sweedish,"Sweedish",sweedishDetails));
-        models.add(new Model(R.drawable.deeptissue,"Deeptissue",deeptissueDetails));
-        models.add(new Model(R.drawable.sports,"Sports",sportsDetails));
-        models.add(new Model(R.drawable.prenatal,"Prenatal",prenatalDetails));
-
-        mViews = new ArrayList<>();
-        mViews.add(null);
-        mViews.add(null);
-        mViews.add(null);
-        mViews.add(null);
-
-        adapter = new Adapter(models,this,mViews);
-
-        viewPager = findViewById(R.id.viewPager);
-        viewPager.setAdapter(adapter);
-        //viewPager.setClipToPadding(false);
-        //viewPager.setClipChildren(false);
-        viewPager.setOffscreenPageLimit(3);
-        viewPager.setPadding(20,0,20,0);
-
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+          sweedish.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                int realCurrentPosition;
-                int nextPosition;
-                float baseElevation = adapter.getBaseElevation();
-                float realOffset;
-                boolean goingLeft = lastOffset > positionOffset;
-
-                // If we're going backwards, onPageScrolled receives the last position
-                // instead of the current one
-
-                if(goingLeft){
-                    realCurrentPosition = position + 1;
-                    nextPosition = position;
-                    realOffset = 1-positionOffset;
-                }else{
-                    nextPosition = position + 1;
-                    realCurrentPosition = position;
-                    realOffset = positionOffset;
-                }
-
-                offset = realOffset;
-
-                // Avoid crash on scroll
-                if(nextPosition > adapter.getCount() - 1 || realCurrentPosition > adapter.getCount()-1){
-                    return;
-                }
-
-                CardView currentCard = mViews.get(realCurrentPosition);
-
-                // This might be null if a fragment is being used
-                // and views weren't created yet
-
-                if(currentCard != null){
-                    if(scalingEnabled){
-                        currentCard.setScaleX((float)(1+0.1*(1-realOffset)));
-                        currentCard.setScaleY((float)(1+0.1*(1-realOffset)));
-                    }
-                    //  currentCard.setCardElevation((baseElevation + baseElevation *(slideAdapter.MAX_ELEVATION_FACTOR-1)* (1-realOffset)));
-                }
-
-                CardView nextCard = mViews.get(nextPosition);
-
-                // We might be scrolling fast enough so that the next (or previous) card
-                //was already destroyed or a fragmentmight not have been created yet
-                if(nextCard != null){
-                    if(scalingEnabled){
-                        nextCard.setScaleX((float)(1+0.1*(realOffset)));
-                        nextCard.setScaleY((float)(1+0.1*(realOffset)));
-                    }
-                }
-
-                lastOffset = positionOffset;
+            public void onClick(View v) {
+                String descp = "In Sweden this massage is also called classic massage. It is a classic treatment that is based on western standards. Five techniques used in this type of massage are; stroking and gliding, kneading, rubbing, tapping or pounding, and vibrating. These are the things that come to mind when you think about Swedish classic massage.";
+                showDialog(MainActivity.this,"Sweedish",R.drawable.sweedish,descp);
             }
-
-            @Override
-            public void onPageSelected(int position) {
-
-                Log.d("hello",String.valueOf(position));
-                /*if(position == models.size()-1) {
-                    viewPager.setCurrentItem(0);
-
-                }*/
-            }
-
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-
         });
+
+
+        deeptissue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String descp = "If you have persisting pain and muscle aches, it is the right time to contact us for deep tissue massage. Our expert therapists will use deliberate and slow pressure to reach deep layers of tissues and muscles. This massage is good for chronic aches and pain in areas such as neck, upper back, leg muscle tightness, lower back pain, and sore shoulders.";
+                showDialog(MainActivity.this,"Deep Tissue",R.drawable.deeptissue,descp);
+            }
+        });
+
+
+        sports.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String descp = "This is what you need if you are part of a sports. This massage helps your tissue and prepare body and mind for better performance when you are in the field. This improves endurance and flexibility, which prevents injury and muscle soreness. It is a best for those who are regularly involved in sports.";
+                showDialog(MainActivity.this,"Sports",R.drawable.sports,descp);
+            }
+        });
+
+
+        prenatal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String descp = "A massage for pregnant women! It takes away the strain from your tired muscles and joints. It can also help improve blood circulation and reduce any swelling that you have been having lately. This therapy is based on individual needs which ensures best treatment.";
+                showDialog(MainActivity.this,"Prenatal",R.drawable.prenatal,descp);
+            }
+        });
+
+
+
+
+    }
+
+    public void showDialog(Activity activity,String text_data,int image_data,String details_data){
+        dialog = new Dialog(activity);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setCancelable(false);
+        dialog.setContentView(R.layout.dialog_layout);
+
+
+        TextView text = dialog.findViewById(R.id.text_data);
+        ImageView image = dialog.findViewById(R.id.image_data);
+        TextView details = dialog.findViewById(R.id.details_data);
+
+        text.setText(text_data);
+        image.setImageResource(image_data);
+        details.setText(details_data);
+
+        ImageView cancelDialog = dialog.findViewById(R.id.cancel_dialog);
+        cancelDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        /*Button dialogButton = (Button) dialog.findViewById(R.id.btn_dialog);
+        dialogButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });*/
+
+        dialog.show();
+
     }
 
     @Override
     public void onBackPressed() {
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+        }
+        if(dialog.isShowing())
+        {
+            dialog.dismiss();
         }
     }
 
