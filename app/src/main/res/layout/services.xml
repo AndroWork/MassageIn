@@ -84,7 +84,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:text="Deeptissue"
-                android:textColor="@android:color/black"
+                android:textColor="@color/colorPurple"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -127,7 +127,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:text="Sweedish"
-                android:textColor="@android:color/black"
+                android:textColor="@color/colorPurple"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -172,7 +172,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:text="Sports"
-                android:textColor="@android:color/black"
+                android:textColor="@color/colorPurple"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -216,7 +216,7 @@
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:text="Prenatal"
-            android:textColor="@android:color/black"
+            android:textColor="@color/colorPurple"
             android:textSize="16sp"
             android:textStyle="bold" />
 
