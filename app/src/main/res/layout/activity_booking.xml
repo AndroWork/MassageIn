@@ -5,11 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BookingActivity">
-    <include
-        android:id="@+id/layout1"
-        layout="@layout/app_bar_main"
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@id/layout1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/white"
+            app:titleTextColor="@android:color/black"
+            app:subtitleTextColor="@android:color/black"
+            android:theme="@style/ToolBarStyle"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            android:elevation="5dp"
+            />
+
+
+    </android.support.design.widget.AppBarLayout>
 
     <ScrollView
         android:layout_below="@id/layout1"
@@ -22,15 +39,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Massage Info"
-                android:textAlignment="center"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"
-                android:textStyle="bold"
-                android:textSize="20sp"/>
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -55,6 +63,7 @@
                 android:textAlignment="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
+                android:textColor="@android:color/black"
                 android:textStyle="bold"
                 android:textSize="20sp"/>
 

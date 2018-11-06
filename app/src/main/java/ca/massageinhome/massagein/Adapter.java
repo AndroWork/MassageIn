@@ -3,6 +3,7 @@ package ca.massageinhome.massagein;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.PagerAdapter;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
@@ -52,7 +53,7 @@ public class Adapter extends PagerAdapter {
 
         TextView title,details;
         ImageView image;
-        Button book;
+        com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton book;
 
         image = view.findViewById(R.id.image);
         title = view.findViewById(R.id.title);

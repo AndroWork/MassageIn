@@ -98,6 +98,7 @@ public class MainActivity extends AppCompatActivity
         //viewPager.setClipToPadding(false);
         //viewPager.setClipChildren(false);
         viewPager.setOffscreenPageLimit(3);
+        viewPager.setPadding(20,0,20,0);
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override

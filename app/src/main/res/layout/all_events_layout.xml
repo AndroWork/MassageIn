@@ -68,18 +68,26 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
-            <Button
+
+
+            <com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton
                 android:id="@+id/book"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="Book Now"
-                android:elevation="0dp"
-                android:background="@color/colorPrimaryDark"
+                app:fabType="roundedSquare"
+                app:fabSizes="mini"
+                app:fabText="Book Now"
+                android:textAlignment="center"
+                app:fabTextColor="@android:color/white"
                 android:layout_marginBottom="20dp"
                 android:layout_centerInParent="true"
-                android:textColor="@android:color/white"
-                android:layout_alignParentBottom="true"
+                app:fabElevation="10dp"
+                app:fabColor="@color/colorPrimaryDark"
+                app:fabIconColor="@android:color/white"
+                android:layout_alignParentBottom="true" />
+
+
+
 
                 />
         </RelativeLayout>
