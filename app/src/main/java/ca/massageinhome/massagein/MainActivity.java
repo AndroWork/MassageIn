@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity
     public void showDialog(Activity activity,String text_data,int image_data,String details_data){
         dialog = new Dialog(activity);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setCancelable(false);
+        dialog.setCancelable(true);
         dialog.setContentView(R.layout.dialog_layout);
 
 
@@ -137,17 +137,13 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
         }
-        if(dialog.isShowing())
-        {
-            dialog.dismiss();
-        }
+
     }
 
     @Override
