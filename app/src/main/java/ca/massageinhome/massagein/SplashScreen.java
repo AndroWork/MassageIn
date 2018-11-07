@@ -1,6 +1,7 @@
 package ca.massageinhome.massagein;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,11 +14,12 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
         ImageView splashLogo = findViewById(R.id.splash_logo);
-        splashLogo.setOnClickListener(new View.OnClickListener() {
+
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onClick(View view) {
+            public void run() {
                 startActivity(new Intent(SplashScreen.this,LogIn.class));
             }
-        });
+        },3000);
     }
 }

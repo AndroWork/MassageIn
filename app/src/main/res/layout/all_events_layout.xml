@@ -8,6 +8,12 @@
     app:cardCornerRadius="10dp"
     android:fadingEdgeLength="0dp"
     android:background="@android:color/white"
+    android:layout_marginTop="50dp"
+    android:layout_marginBottom="70dp"
+    android:layout_marginEnd="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginStart="30dp"
     app:cardUseCompatPadding="true">
 
     <LinearLayout
@@ -58,7 +64,6 @@
                 android:text="In Sweden this massage is also called classic massage. It is a classic treatment that is based on western standards. Five techniques used in this type of massage are; stroking and gliding, kneading, rubbing, tapping or pounding, and vibrating. These are the things that come to mind when you think about Swedish classic massage."
                 android:textSize="13sp"
                 android:lineSpacingExtra="8dp"
-
                 />
 
 
