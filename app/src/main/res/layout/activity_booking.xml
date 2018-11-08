@@ -23,7 +23,16 @@
             android:theme="@style/ToolBarStyle"
             app:titleTextAppearance="@style/Toolbar.TitleText"
             android:elevation="5dp"
-            />
+            >
+            <TextView
+                android:text="Booking"
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_gravity="center" />
+        </android.support.v7.widget.Toolbar>
 
 
     </android.support.design.widget.AppBarLayout>
@@ -34,83 +43,71 @@
         android:layout_height="match_parent"
         android:fadeScrollbars="true">
 
+        <android.support.v7.widget.CardView
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                app:cardUseCompatPadding="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Select Duration"
-                android:textAlignment="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
+                android:text="How longer your Massage goes?"
+                android:padding="10dp"
                 android:textColor="@android:color/black"
-                android:textStyle="bold"
-                android:textSize="20sp"/>
+                android:textSize="12sp"
+                android:textAlignment="center"
+                />
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                app:cardUseCompatPadding="true">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:orientation="horizontal"
-                        android:weightSum="3">
+                        android:gravity="center"
+                        >
                         <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/colorPrimary"
+                            android:id="@+id/min60"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/round_circle"
                             android:text="60 Min"
                             android:textColor="#ffffff"
-                            android:layout_weight="1"
+                            android:textSize="9sp"
+                            android:textAllCaps="false"
                             android:layout_marginRight="5dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"/>
 
                         <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/colorPrimary"
-                            android:text="70 Min"
+                            android:id="@+id/min75"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/round_circle"
+                            android:text="75 Min"
                             android:textColor="#ffffff"
-                            android:layout_weight="1"
-                            android:layout_marginRight="1.5dp"
-                            android:layout_marginLeft="1.5dp"
+                            android:textSize="9sp"
+                            android:textAllCaps="false"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"/>
-
                         <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/colorPrimary"
-                            android:text="80 Min"
+                            android:id="@+id/min90"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/round_circle"
+                            android:text="90 Min"
                             android:textColor="#ffffff"
-                            android:layout_weight="1"
+                            android:textSize="9sp"
+                            android:textAllCaps="false"
                             android:layout_marginRight="5dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
@@ -118,19 +115,133 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
-
-            <Button
-                android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="40dp"
-                android:background="@color/colorPrimary"
-                android:text="Next"
-                android:textColor="#ffffff"
-                android:id="@+id/booking1_next"/>
+                android:text="What Time you prefer having Massage?"
+                android:padding="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Start Time"
+                        android:textColor="@android:color/black"
+                        android:textSize="9sp"
+                        />
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/startdatetime"
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        android:textAllCaps="false"
+                        android:textColor="?attr/editTextColor"
+                        android:background="?attr/editTextBackground"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="10dp"
+                        />
 
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="End Time"
+                        android:textColor="@android:color/black"
+                        android:textSize="9sp"
+
+                        />
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/enddatetime"
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        android:textAllCaps="false"
+                        android:textColor="?attr/editTextColor"
+                        android:background="?attr/editTextBackground"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="10dp"
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Where you looking for the Service?"
+                android:padding="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Kohli Colony Haldwani"
+                android:textSize="10sp"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="40dp"
+
+                />
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/gps"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
+
+                    />
+            </LinearLayout>
+            <Button
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="Payment"
+                android:background="@drawable/button"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                />
         </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
 
     </ScrollView>
 

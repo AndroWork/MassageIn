@@ -2,6 +2,7 @@ package ca.massageinhome.massagein;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.CardView;
@@ -123,13 +124,14 @@ public class MainActivity extends AppCompatActivity
                 dialog.dismiss();
             }
         });
-        /*Button dialogButton = (Button) dialog.findViewById(R.id.btn_dialog);
-        dialogButton.setOnClickListener(new View.OnClickListener() {
+
+        Button bookingButton = (Button) dialog.findViewById(R.id.booking);
+        bookingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialog.dismiss();
+                startActivity(new Intent(MainActivity.this,BookingActivity.class));
             }
-        });*/
+        });
 
         dialog.show();
 

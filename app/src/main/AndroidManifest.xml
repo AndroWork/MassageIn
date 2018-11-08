@@ -35,8 +35,14 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PaymentActivity"
-            android:label="Payments"></activity>
-        <activity android:name=".BookingActivity"></activity>
+            android:label="Payments">
+
+        </activity>
+        <activity android:name=".BookingActivity"
+            android:windowSoftInputMode="stateHidden"
+            >
+
+        </activity>
     </application>
 
 </manifest>
