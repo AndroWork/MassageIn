@@ -84,7 +84,7 @@
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
         android:background="@android:color/white"/>
-<<<<<<< HEAD
+
 
         <Button
             android:id="@+id/booking"
