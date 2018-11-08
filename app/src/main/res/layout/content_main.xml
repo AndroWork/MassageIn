@@ -17,11 +17,11 @@
         android:overScrollMode="never"
         android:clipToPadding="false"
         android:paddingTop="50dp"
-        android:paddingBottom="50dp"
-        android:paddingEnd="25dp"
-        android:paddingRight="25dp"
-        android:paddingLeft="25dp"
-        android:paddingStart="25dp">
+        android:paddingBottom="70dp"
+        android:paddingEnd="30dp"
+        android:paddingRight="30dp"
+        android:paddingLeft="30dp"
+        android:paddingStart="30dp">
 
 
     </android.support.v4.view.ViewPager>-->
