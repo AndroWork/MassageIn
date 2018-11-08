@@ -16,7 +16,7 @@ public class BookingActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("   Massage In Home");
+        getSupportActionBar().setTitle("   Service Booking");
         Button button = findViewById(R.id.booking1_next);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
