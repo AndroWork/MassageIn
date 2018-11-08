@@ -7,40 +7,85 @@
     tools:context=".PaymentActivity"
     android:orientation="vertical">
 
-    <TextView
+    <android.support.design.widget.AppBarLayout
+        android:id="@id/layout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Payment Details"
-        android:textAlignment="center"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/white"
+            app:titleTextColor="@android:color/black"
+            app:subtitleTextColor="@android:color/black"
+            android:theme="@style/ToolBarStyle"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            android:elevation="5dp"
+            />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
-        android:textStyle="bold"
-        android:textSize="20sp"/>
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        app:cardElevation="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Amount : $30"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+    </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardUseCompatPadding="true"
+        app:cardCornerRadius="5dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
+        app:cardElevation="15dp"
         >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Card Holder Name"
+                android:background="@drawable/shape"
                 android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
                 android:layout_marginTop="15dp"/>
             <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content" 
                 android:hint="Credit Card Number"
+                android:background="@drawable/shape"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+
                 android:layout_marginTop="15dp"
                 android:paddingLeft="10dp"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -56,14 +101,17 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Expiry Month"
-                        android:layout_marginLeft="10dp"/>
+                        android:text="Expiry Month" />
                     <Spinner
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:entries="@array/months"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="10dp"></Spinner>
+                        android:background="@drawable/shape"
+                        android:paddingTop="10dp"
+                        android:layout_marginTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp">
+                    </Spinner>
                 </LinearLayout>
 
                 <LinearLayout
@@ -74,35 +122,61 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Expiry Year"
-                        android:layout_marginLeft="10dp"/>
+                        android:text="Expiry Year" />
                     <Spinner
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:entries="@array/date"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="10dp"></Spinner>
+                        android:background="@drawable/shape"
+                        android:layout_marginTop="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"></Spinner>
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="CVV"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_gravity="end"
+                    android:background="@drawable/shape"
+                    android:paddingTop="10dp"
+                    android:layout_marginTop="25dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp" />
+                </LinearLayout>
                 
             </LinearLayout>
 
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Card Information"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_gravity="center"
+                android:text="Pay"
+                android:textColor="#ffffff"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/payment_button"/>
+
         </LinearLayout>
     </android.support.v7.widget.CardView>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:layout_gravity="center"
-        android:text="SUBMIT"
-        android:textColor="#ffffff"
-        android:layout_marginTop="35dp"
-        android:id="@+id/payment_button"/>
 
 </LinearLayout>

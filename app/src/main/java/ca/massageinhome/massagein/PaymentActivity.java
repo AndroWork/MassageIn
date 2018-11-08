@@ -13,6 +13,9 @@ public class PaymentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("   Payment");
 
         Button paymentButton = findViewById(R.id.payment_button);
         paymentButton.setOnClickListener(new View.OnClickListener() {

@@ -40,6 +40,7 @@ public class BookingActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+<<<<<<< HEAD
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         startdatetime = findViewById(R.id.startdatetime);
         enddatetime = findViewById(R.id.enddatetime);
@@ -175,6 +176,11 @@ public class BookingActivity extends AppCompatActivity {
         });
 
         enddatetime.setOnClickListener(new View.OnClickListener() {
+=======
+        getSupportActionBar().setTitle("   Service Booking");
+        Button button = findViewById(R.id.booking1_next);
+        button.setOnClickListener(new View.OnClickListener() {
+>>>>>>> 654193eadc027f4d980be344041274a7e74b7a4c
             @Override
             public void onClick(View v) {
                 timePicker(1);

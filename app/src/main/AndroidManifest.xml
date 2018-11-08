@@ -35,6 +35,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PaymentActivity"
+<<<<<<< HEAD
             android:label="Payments">
 
         </activity>
@@ -43,6 +44,11 @@
             >
 
         </activity>
+=======
+            android:label="Payments" />
+        <activity android:name=".BookingActivity" />
+        <activity android:name=".IdUpload"></activity>
+>>>>>>> 654193eadc027f4d980be344041274a7e74b7a4c
     </application>
 
 </manifest>
