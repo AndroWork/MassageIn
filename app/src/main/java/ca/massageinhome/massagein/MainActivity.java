@@ -19,7 +19,6 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -126,20 +125,8 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-<<<<<<< HEAD
         Button bookingButton = (Button) dialog.findViewById(R.id.booking);
         bookingButton.setOnClickListener(new View.OnClickListener() {
-=======
-        Button bookNow = dialog.findViewById(R.id.book_now);
-        bookNow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,BookingActivity.class));
-            }
-        });
-        /*Button dialogButton = (Button) dialog.findViewById(R.id.btn_dialog);
-        dialogButton.setOnClickListener(new View.OnClickListener() {
->>>>>>> 654193eadc027f4d980be344041274a7e74b7a4c
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,BookingActivity.class));
