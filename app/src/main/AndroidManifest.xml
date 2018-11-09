@@ -35,17 +35,14 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PaymentActivity"
-            android:label="Payments">
-
-        </activity>
-        <activity android:name=".IdUpload"
-            android:label="IdUpload"/>
-
-        <activity android:name=".BookingActivity"
-            android:windowSoftInputMode="stateHidden"
-            >
-
-        </activity>
+            android:label="Payments"></activity>
+        <activity
+            android:name=".IdUpload"
+            android:label="IdUpload" />
+        <activity
+            android:name=".BookingActivity"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity android:name=".MyBookings"></activity>
     </application>
 
 </manifest>
