@@ -100,7 +100,7 @@
             android:textSize="12sp"
             />
     </LinearLayout>
-<<<<<<< HEAD
+
 
 
 <!--
@@ -135,8 +135,6 @@
 <<<<<<< HEAD
     -->
 
-=======
->>>>>>> dd652e7484da3d50b5cbf2e59f3aa9871925fad0
 </RelativeLayout>
     </ScrollView>
 
