@@ -5,10 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Register"
-    android:background="#c7ac92">
+    android:background="@drawable/gradient">
 
-    <ImageView
-        android:id="@+id/imageView3"
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImage"
         android:layout_width="85dp"
         android:layout_height="85dp"
         android:layout_marginStart="8dp"
@@ -16,11 +25,22 @@
         android:layout_marginTop="52dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_mobi" />
+        android:src="@drawable/profile"
+        />
+        <ImageButton
+            android:layout_gravity="bottom|end"
+            android:id="@+id/add_photo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:color/white"
+            android:scaleType="fitCenter"
+            android:src="@drawable/plus"
+            android:backgroundTint="@android:color/transparent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="170dp" />
+
+    </FrameLayout>
 
     <EditText
         android:id="@+id/editText3"
@@ -31,14 +51,14 @@
         android:layout_marginTop="56dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/shape"
+        android:background="@drawable/inputs"
         android:ems="10"
         android:hint="First Name"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/frame" />
 
     <EditText
         android:id="@+id/editText4"
@@ -49,7 +69,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/shape"
+        android:background="@drawable/inputs"
         android:ems="10"
         android:hint="Last Name"
         android:inputType="textPersonName"
@@ -67,7 +87,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/shape"
+        android:background="@drawable/inputs"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -85,7 +105,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/shape"
+        android:background="@drawable/inputs"
         android:ems="10"
         android:hint="E-Mail Id"
         android:inputType="textEmailAddress"

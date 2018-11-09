@@ -174,8 +174,8 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/shape"
-                android:backgroundTint="@color/colorPrimary"
+                android:background="@drawable/button"
+                android:backgroundTint="@color/colorPrimaryDark"
                 android:layout_gravity="center"
                 android:text="Pay"
                 android:textColor="#ffffff"
