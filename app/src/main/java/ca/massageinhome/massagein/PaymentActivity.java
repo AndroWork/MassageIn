@@ -17,12 +17,14 @@ public class PaymentActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setTitle("   Payment");
 
         Button paymentButton = findViewById(R.id.payment_button);
         paymentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(PaymentActivity.this,MainActivity.class));
+                BookingAdapter.data.add(new Model("Prenatal","70 Min","San Ho"));
+                startActivity(new Intent(PaymentActivity.this,MyBookings.class));
             }
         });
     }

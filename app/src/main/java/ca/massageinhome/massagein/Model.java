@@ -2,41 +2,35 @@ package ca.massageinhome.massagein;
 
 public class Model {
 
-    private int image;
-    private String title;
-    private String details;
+    private String massageType;
+    private String duration;
+    private String therapist;
 
 
-    public Model(int image, String title,String details) {
-        this.image = image;
-        this.title = title;
-        this.details = details;
-
+    public Model(String massageType,String duration, String therapist) {
+        this.massageType = massageType;
+        this.duration = duration;
+        this.therapist = therapist;
     }
 
-    public int getImage() {
-        return image;
+    public String getMassageType() {
+        return massageType;
     }
 
-    public void setImage(int image) {
-        this.image = image;
+    public void setMassageType(String massageType) {
+        this.massageType = massageType;
     }
 
-    public String getTitle() {
-        return title;
+    public String getDuration() {
+        return duration;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setDuration(String duration) {
+        this.duration = duration;
     }
 
-    public String getDetails() {
-        return details;
-    }
+    public String getTherapist() {return therapist;}
 
-    public void setDetails(String details) {
-        this.details = details;
-    }
-
+    public void setTherapist(String therapist) {this.therapist = therapist;}
 
 }

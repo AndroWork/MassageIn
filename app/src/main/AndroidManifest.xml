@@ -9,9 +9,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/logo_mobi"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logo_mobi"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -35,6 +35,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PaymentActivity"
+<<<<<<< HEAD
             android:label="Payments">
 
         </activity>
@@ -43,10 +44,18 @@
             android:theme="@style/Base.Theme.AppCompat" />
         
         <activity android:name=".BookingActivity"
+=======
+            android:label="Payments"></activity>
+        <activity
+            android:name=".IdUpload"
+            android:label="IdUpload" />
+        <activity
+            android:name=".BookingActivity"
+>>>>>>> dd652e7484da3d50b5cbf2e59f3aa9871925fad0
             android:windowSoftInputMode="stateHidden"
-            >
-
-        </activity>
+            ></activity>
+        <activity android:name=".MyBookings"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>
