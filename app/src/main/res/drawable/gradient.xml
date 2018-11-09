@@ -5,7 +5,9 @@
         android:angle="45"
         android:endColor="@color/colorPrimary"
         android:startColor="@color/colorPrimaryDark"
-        android:type="linear" />
+        android:type="linear"
+        android:useLevel="true"
+        />
 
     <corners
         android:radius="0dp"/>

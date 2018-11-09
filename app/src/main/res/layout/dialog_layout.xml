@@ -84,21 +84,22 @@
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
         android:background="@android:color/white"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/inputs"
-            android:id="@+id/book_now"
-            android:elevation="5dp"
-            android:backgroundTint="@color/colorPrimary"
-            android:text="Book Now"
-            android:textSize="13sp"
-            android:textColor="@android:color/white"
-            android:textAppearance="@style/Base.V7.Widget.AppCompat.EditText"/>
-    </LinearLayout>
 
+
+        <Button
+            android:id="@+id/booking"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="Book Now"
+            android:background="@drawable/button"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
 </RelativeLayout>
     </ScrollView>
 
