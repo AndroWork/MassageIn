@@ -38,6 +38,9 @@
             android:label="Payments">
 
         </activity>
+        <activity android:name=".IdUpload"
+            android:label="IdUpload"/>
+
         <activity android:name=".BookingActivity"
             android:windowSoftInputMode="stateHidden"
             >

@@ -44,16 +44,11 @@ public class BookingActivity extends AppCompatActivity {
         startdatetime = findViewById(R.id.startdatetime);
         enddatetime = findViewById(R.id.enddatetime);
 
-        Button payment = findViewById(R.id.payment);
-        payment.setOnClickListener(new View.OnClickListener() {
+        Button bookingNext = findViewById(R.id.booking_next);
+        bookingNext.setOnClickListener(new View.OnClickListener() {
             @Override
-<<<<<<< HEAD
             public void onClick(View view) {
                 startActivity(new Intent(BookingActivity.this,IdUpload.class));
-=======
-            public void onClick(View v) {
-                startActivity(new Intent(BookingActivity.this,PaymentActivity.class));
->>>>>>> ce7dc5916fbc7916a327a288c02ecfd720dec903
             }
         });
 
