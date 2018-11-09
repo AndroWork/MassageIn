@@ -21,7 +21,7 @@ public class BookingActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(BookingActivity.this,PaymentActivity.class));
+                startActivity(new Intent(BookingActivity.this,IdUpload.class));
             }
         });
     }

@@ -92,7 +92,6 @@
             android:background="@drawable/inputs"
             android:id="@+id/book_now"
             android:elevation="5dp"
-            android:shadowRadius="5dp"
             android:backgroundTint="@color/colorPrimary"
             android:text="Book Now"
             android:textSize="13sp"
