@@ -41,8 +41,10 @@
             android:label="IdUpload" />
         <activity
             android:name=".BookingActivity"
-            android:windowSoftInputMode="stateHidden"></activity>
-        <activity android:name=".MyBookings"></activity>
+            android:windowSoftInputMode="stateHidden"
+            ></activity>
+        <activity android:name=".MyBookings"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

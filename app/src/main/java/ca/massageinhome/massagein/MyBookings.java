@@ -16,6 +16,7 @@ public class MyBookings extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("   My Bookings");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         RecyclerView bookingsRecyclerView = findViewById(R.id.recycler_my_bookings);
 
